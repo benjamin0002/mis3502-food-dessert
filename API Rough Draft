@@ -23,12 +23,12 @@ let zipcode = $('#zipcode').val();
           // This may be incorrect ... results[0]['enhanced_match']
           
           if (results[0]['enhanced_match'] != 'postal-match'){
-              
+               // Show a message to client that address is invalid and stop the process
+            return;
           }
           
           if (results[0]['enhanced_match'] == 'postal-match'){
-            // Show a message to client that address is invalid and stop the process
-            return;
+            //Not sure if we need this -- just need it to move to the next function 
           }
         },
         error : function(data){
