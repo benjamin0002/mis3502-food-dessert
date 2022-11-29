@@ -30,9 +30,6 @@ let zipcode = $('#zipcode').val();
             // Show a message to client that address is invalid and stop the process
             return;
           }
-      
-          
-        
         },
         error : function(data){
           console.log("Something went wrong.")
