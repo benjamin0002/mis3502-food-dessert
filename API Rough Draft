@@ -1,0 +1,45 @@
+
+
+let validateAddress = function(){
+
+let street = $('#street').val();
+let street2 = ''
+let city = $('#city').val();
+let state = $('#state').val(); //Will need to add state to client and server side code 
+let zipcode = $('#zipcode').val();
+
+  let_the_serialized_data = 'street=' + street + '&street2=' + street2 + '&city=' + city + '&state=' + state + '&zipcode=' + zipcode + '&address-type=us-street-components'
+  console.log(let_the_serialized_data)
+
+    $.ajax({
+        url : https://www.smarty.com/products/single-address,
+        data : the_serialized_data,
+        method : 'POST',
+        success : function(results){
+          console.log(results);
+          
+          //Need to 
+          
+          // This may be incorrect ... results[0]['enhanced_match']
+          
+          if (results[0]['enhanced_match'] != 'postal-match'){
+              
+          }
+          
+          if (results[0]['enhanced_match'] == 'postal-match'){
+            // Show a message to client that address is invalid and stop the process
+            return;
+          }
+      
+          
+        
+        },
+        error : function(data){
+          console.log("Something went wrong.")
+          // Show a message to the client that is invalid and stop the process
+        }
+      });
+}
+
+// Then we call validateAddress() in both createAddress and update Address the line before the ajax call in those functions 
+
