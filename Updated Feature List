@@ -1,1 +1,15 @@
 
+
+
+
+
+
+    message[message.length] = "Feature 1: Issue a POST against ./users with usertoken, name, frequency of delivery, duration of subscription, and food option, to create a new subscription. When the POST is successful, a JSON object representing the new user is returned.";
+    message[message.length] = "Feature 2: Issue a POST against ./address with usertoken, street, city, state, and zipcode, to create a new addressto be paired with the corresponding user/subscription. When the POST is successful, a JSON object representing the new address is returned.";
+    message[message.length] = "Feature 3: Issue a GET aginst ./subscription with usertoken to return a specific users subscription choices. ";
+    message[message.length] = "Feature 4: Issue a GET aginst ./address with usertoken to return a specific users address. ";
+    message[message.length] = "Feature 5: Issue a PUT against ./subscription to update a specific users subscription. ";
+    message[message.length] = "Feature 6: Issue a PUT against ./address to update a specific users address. ";
+    message[message.length] = "Feature 7: Issue a GET against ./Delivery to return all of the delivery history for a specific user. The results will be returned in a JSON array.";
+    message[message.length] = "Feature 8: Issue a DELETE against ./cancel with a userotken to delete both subscription and address records .";
+    message[message.length] = "This web service was created by Ben Kaplan and Savannah Tertulien."
