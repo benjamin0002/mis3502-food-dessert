@@ -1,0 +1,39 @@
+Update Subscription
+
+//This should replace lines 421-423 in JS code
+$('#btnAddSub1').click(function(){
+	  $(".content-wrapper").hide(); 
+    $("#div-addsub").show();
+    $("#btnAddSub2").hide();
+    $("#btnUpdateSub").show();
+	});
+  
+//This needs to be added to JS code
+$('#btnUpdateSub').click(function(){
+		updateSubscription();
+	});
+  
+  Update Address
+  
+  First:
+  
+  Update HTML
+  Add after line 237 in HTML
+  <input type="button" value="Add Address"  id="btnUpdateAddress2" class="btn btn-success" style="font-size:2em;width:100%;" >
+  
+  In JS
+  //Should Replace lines 448-450 in JS
+  $("#btnUpdateAddress").click(function(){
+    $(".content-wrapper").hide(); 
+    $("#div-addaddress").show();
+    $("#btnAddAddress2").hide();
+    $("#btnUpdateAddress2").show();
+	})
+
+//Needs to be added to JS code
+ $("#btnUpdateAddress2").click(function(){
+		updateAddress();
+	})
+  
+  
+  
